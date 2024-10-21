@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Planner</h1>
+
+        <!-- Form for Adding Task -->
+        <form id="task-form">
+            <label for="description">Task Description:</label>
+            <input type="text" id="description" placeholder="Enter task description" required>
+
+            <label for="category">Select Task Category:</label>
+            <select id="category" required>
+                <option value="0">Most Important & Urgent</option>
+                <option value="1">Important & Urgent</option>
+                <option value="2">Not Important but Urgent</option>
+                <option value="3">Most Important but Not Urgent</option>
+                <option value="4">Important but Not Urgent</option>
+                <option value="5">Not Important & Not Urgent</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+        </form>
+
+        <!-- Buttons for Other Actions -->
+        <div class="actions">
+            <button id="complete-task">Complete Task</button>
+            <button id="undo-task">Undo Last Completed Task</button>
+            <button id="show-progress">Show Progress</button>
+        </div>
+
+        <!-- Section to Display Progress -->
+        <div id="task-progress"></div>
+    </div>
+
+    <script src="taskPlanner.js"></script>
+</body>
+</html>
